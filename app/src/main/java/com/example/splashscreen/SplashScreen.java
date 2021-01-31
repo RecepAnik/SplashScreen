@@ -19,11 +19,11 @@ public class SplashScreen extends AppCompatActivity {
         Thread timerThread = new Thread(){
             public void run(){
                 try{
-                    sleep(2000);
+                    sleep(2000); //süre
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent intent = new Intent(SplashScreen.this, MainActivity.class); //açılacak sayfa
                     startActivity(intent);
                 }
             }
@@ -33,6 +33,6 @@ public class SplashScreen extends AppCompatActivity {
 
     @Override    protected void onPause() {
         super.onPause();
-        finish();
+        finish();// sayfayı kapatma
     }
 }
